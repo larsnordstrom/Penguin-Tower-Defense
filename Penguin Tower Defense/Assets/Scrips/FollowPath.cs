@@ -24,7 +24,7 @@ public class FollowPath : MonoBehaviour
             currentpos++;
         }*/
 
-        if (currentpos == a.Length) {
+        if (currentpos == a.Length-1) {
             EnemyController ec = gameObject.GetComponent<EnemyController>();
             ec.DealDamage();
             Debug.Log("EnemyIsDead");
