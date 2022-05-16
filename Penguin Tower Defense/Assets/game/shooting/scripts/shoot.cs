@@ -87,7 +87,10 @@ public class shoot : MonoBehaviour
         pew = clone.GetComponent<Rigidbody2D>();
         // ger en relativ force rakt uppåt, så det hållet som vapnet pekar
         pew.AddRelativeForce(new Vector3(0, -b_speed), ForceMode2D.Force);
-        Destroy(clone, 2f); 
+        Destroy(clone, 2f);
+        spriteAnimation a = gameObject.GetComponentInParent<spriteAnimation>();
+        a.enabled = true;
+
     }
     // special effect 
 

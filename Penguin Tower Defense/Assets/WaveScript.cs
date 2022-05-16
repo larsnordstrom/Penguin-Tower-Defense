@@ -56,8 +56,8 @@ public class WaveScript : MonoBehaviour
 
             WaveRunning = true;
             Debug.Log(CurrentRound);
-            CurrentRound++;
-            string[] tmp = waves[CurrentRound-1].Split(char.Parse(","));
+
+            string[] tmp = waves[CurrentRound].Split(char.Parse(","));
 
             int roundLength = tmp.Length;
             Enemyint.Clear();
@@ -82,7 +82,7 @@ public class WaveScript : MonoBehaviour
         for (int i = 0; i < listSize; i++)
         {
 
-           // Debug.Log(Enemyint[i]);
+            Debug.Log("Enemies/Ship"+Enemyint[i].ToString());
 
             GameObject EnemyShip = Instantiate((GameObject)Resources.Load("Enemies/Ship"+Enemyint[i].ToString(), typeof(GameObject)), SpawnPos, Quaternion.identity);
 
@@ -106,12 +106,15 @@ public class WaveScript : MonoBehaviour
                 if (WaveEnemies[i] == null && WaveEnemies.Count == Enemyint.Count)
                 {
 
+
+
                 }
                 else { cleared = false; break; }
             }
 
             if (cleared == true)
             {
+                CurrentRound++;
                 WaveRunning = false;
                 WaveEnemies.Clear();
             }
