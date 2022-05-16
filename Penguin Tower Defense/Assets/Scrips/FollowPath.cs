@@ -27,7 +27,7 @@ public class FollowPath : MonoBehaviour
         if (currentpos == a.Length-1) {
             EnemyController ec = gameObject.GetComponent<EnemyController>();
             ec.DealDamage();
-            Debug.Log("EnemyIsDead");
+            //Debug.Log("EnemyIsDead");
             ded = true;
             Destroy(gameObject);
         }
@@ -37,7 +37,6 @@ public class FollowPath : MonoBehaviour
                 currentpos++;
                 rotera();
             }
-
 
             HowFarIn += speed * Time.deltaTime;
             gameObject.transform.position = Vector2.MoveTowards(transform.position, a[currentpos].position, speed * Time.deltaTime);

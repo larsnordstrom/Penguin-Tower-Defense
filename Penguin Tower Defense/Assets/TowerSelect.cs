@@ -11,7 +11,7 @@ public class TowerSelect : MonoBehaviour
     public void OnMouseDown()
     {
 
-        Debug.Log("yeahyeahyeah");
+       // Debug.Log("yeahyeahyeah");
 
         GameObject Tower2Spawn;
         Tower2Spawn = Instantiate(tower, transform.position, Quaternion.identity);
