@@ -13,6 +13,8 @@ public class WaveScript : MonoBehaviour
     List<int> Enemyint = new List<int>();
     string[] waves;
 
+    bool victoryAchieved = false;
+
     //public GameObject Ship;
 
     private void Awake()
@@ -52,7 +54,7 @@ public class WaveScript : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if(!WaveRunning) {
+        if(!WaveRunning && !victoryAchieved) {
 
             WaveRunning = true;
             Debug.Log(CurrentRound);
@@ -117,6 +119,12 @@ public class WaveScript : MonoBehaviour
                 CurrentRound++;
                 WaveRunning = false;
                 WaveEnemies.Clear();
+
+                if (CurrentRound == waves.Length - 1)
+                {
+                    victoryAchieved = true;
+                    FindObjectOfType<LevelLoader>().LoadSelectedLevel(2); //Victory
+                }
             }
 
         }

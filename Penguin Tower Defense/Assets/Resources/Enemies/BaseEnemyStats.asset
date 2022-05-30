@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BaseEnemyStats
   m_EditorClassIdentifier: 
   hp: 0
-  dmg: 0
+  dmg: 1
   speed: 0

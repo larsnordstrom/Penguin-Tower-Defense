@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -4770795299684242579}
   - component: {fileID: 8395566727912136708}
   - component: {fileID: 1991148480568618853}
+  - component: {fileID: 4247482138992745861}
   m_Layer: 0
   m_Name: Fast_Bullet
   m_TagString: Untagged
@@ -47,10 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea74c9f2352f9b54bab443c90d140441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3000
+  speed: 750
   dmg: 2
-  firerate: 10
-  affect: 1
+  timeBetweenShots: 0.18
+  affect: 2
+  maxDistance: 0
 --- !u!114 &-4770795299684242579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +102,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0062161684, y: -0.0031080842}
   m_Size: {x: 0.97242975, y: 1.9883727}
   m_Direction: 0
+--- !u!114 &4247482138992745861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408921267155858384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d63fbd185182c4cbeb5389f644bb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &833785260128825198
 GameObject:
   m_ObjectHideFlags: 0

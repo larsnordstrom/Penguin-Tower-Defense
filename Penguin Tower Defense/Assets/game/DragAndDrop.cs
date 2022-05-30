@@ -84,7 +84,7 @@ public class DragAndDrop : MonoBehaviour
                 //RangeView.GetComponent<RangeScript>().enabled = false;
                 gameObject.GetComponent<DragAndDrop>().enabled = false;
                 gameObject.GetComponent<TowerSeeking>().enabled = true;
-                g.GetComponent<coins>().Coins -= 50;
+                g.GetComponent<coins>().Coins -= towerCost;
 
             }
         }
